@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { ToolbarComponent } from './src/components/toolbar/toolbar.component';
+import { FooterComponent } from './src/components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterModule, ToolbarComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'omar-practica4';
-}
+export class AppComponent {}
+// export class AppComponent {
+//   title = 'omar-practica4';
+// }
